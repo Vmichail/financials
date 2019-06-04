@@ -1,0 +1,35 @@
+
+.lightblue {
+    color:  rgb(92, 170, 235) !important;
+}
+.border {
+    cursor: pointer;
+    border: 1px solid black;
+}
+.border:hover {
+    background-color: greenyellow;
+}
+.border2 {
+    background-color: rgb(120, 227, 253);
+    font-size: 18px;
+}
+.width {
+    margin-top: 0;
+    width: 100%;
+}
+.edit:hover {
+    cursor: pointer;
+    background-color: rgb(92, 170, 235) !important;
+}
+.submit{
+    padding: 15px;
+    background-color: rgb(92, 235, 187) !important;
+}
+.submit:hover {
+    cursor: pointer;
+    background-color: rgb(92, 170, 235) !important;
+}
+.totalExpenses {
+    text-decoration: underline;
+    color: brown;
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Financials</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- navbar-->
+<section>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Financials</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Page 1</a></li>
+            <li><a href="#">Page 2</a></li>
+            <li><a href="#">Page 3</a></li>
+          </ul>
+        </div>
+      </nav>
+</section>
+<div class="jumbotron text-center">
+  <h3>Welcome <span class="name lightblue"></span> </h4>
+  <p>Below you can see your overview of your expenses/incomes</p> 
+  <p class="lightblue">v0.01</p>
+</div>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h3 class="text-center">June 2019</h3>
+     
+    </div>
+  <div class="row">
+        <div class="col-sm-4">
+                <div class="dropdown">
+                        <h3 class="border dropdown-toggle" id="menu1" data-toggle="dropdown">Incomes</h3>
+                        <div class="dropdown-menu width" aria-labelledby="menu1">
+                          <p>Job Income:795,67</p>
+                          <p>Ticke Card:100,00</p>
+                          <p>Family: 200,00</p>
+                          <p class="divider"></p>
+                          <p class="edit">Add/Edit Income</p>
+                        </div>
+                      </div>
+         
+        </div>
+        <div class="col-sm-4">
+                <div class="dropdown">
+                        <h3 class="border dropdown-toggle" id="menu1" data-toggle="dropdown">Expenses</h3>
+                        <div class="dropdown-menu width" aria-labelledby="menu1">
+                          <p>Home rent:~300,00</p>
+                          <p>Power-Bill:~40,00</p>
+                          <p>Water-Bill: ~20,00</p>
+                          <p>Κοινοχρηστα: ~20,00</p>
+                          <p class="divider"></p>
+                          <p>3-6-2019</p>
+                          <p class="divider"></p>
+                          <p>4-6-2019</p>
+                          <p class="divider"></p>
+                          <p>5-6-2019</p>
+                          <p class="divider"></p>
+                          <p>6-6-2019</p>
+                          <p class="divider"></p>
+                          <p>7-6-2019</p>
+                          <p class="divider"></p>
+                          <p>8-6-2019</p>
+                          <p class="divider"></p>
+                          <p class="edit" id="Expenses">Add/Edit Expenses</p>
+                        </div>
+                      </div>
+         
+        </div>
+         
+        <div class="col-sm-4">
+                <div class="dropdown">
+                        <h3 class="border dropdown-toggle" id="menu1" data-toggle="dropdown">Month Summary</h3>
+                        <div class="dropdown-menu width" aria-labelledby="menu1">
+                          <p>Total Incomes:795,67</p>
+                          <p>Total Expenses:100,00</p>
+                          <p>Summary: 200,00</p>
+                          <p class="divider"></p>
+                          <p class="edit">Add/Edit Summary</p>
+                          <p class="edit">Should't used</p>
+                        </div>
+                      </div>
+         
+        </div>
+    </div>
+</div>
+</body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAPESOvSYKNECgdO7u_1mOafzoIjmBfRA0",
+    authDomain: "quiz-1b3ff.firebaseapp.com",
+    databaseURL: "https://quiz-1b3ff.firebaseio.com",
+    projectId: "quiz-1b3ff",
+    storageBucket: "quiz-1b3ff.appspot.com",
+    messagingSenderId: "99762053153",
+    appId: "1:99762053153:web:9974e9f78e2eb3f4"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  var database = firebase.database();
+  //Read Data
+  firebase.database().ref('/Expenses').once('value').then(function(snapshot) {
+  var month = (snapshot.val() && snapshot.val().month) || 'Anonymous';
+  console.log("Month:"+month);
+  // ...
+});
+</script>
+<script src="js.js"></script>
+</html>

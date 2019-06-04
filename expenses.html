@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Financials</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- navbar-->
+<section>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Financials</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Page 1</a></li>
+            <li><a href="#">Page 2</a></li>
+            <li><a href="#">Page 3</a></li>
+          </ul>
+        </div>
+      </nav>
+</section>
+<div class="jumbotron text-center">
+  <h3><span class="name lightblue"></span> </h4>
+  <p>Below you can Edit/Add expenses</p> 
+  <p class="lightblue">v0.01</p>
+</div>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 border2">
+      <h3 class="text-center">June 2019</h3>
+      <div class="col-sm-12 text-center expenses">      
+      </div>
+      <div class="col-sm-12 text-center totalExpenses">
+        <p>Total Expenses on June:<span class="totalJune">Loading...</span></p>     
+        </div>
+    </div>
+  <div class="row">
+        <div class="col-sm-6">
+                <div class="dropdown">
+                        <h3 class="border dropdown-toggle text-center" id="menu1" data-toggle="dropdown">Delete Exp.</h3>
+                        <div class="dropdown-menu width" aria-labelledby="menu1">
+                         
+                          <p class="divider"></p>
+                          <p class="edit">Add/Edit Income</p>
+                        </div>
+                      </div>
+         
+        </div>
+        <div class="col-sm-6">
+                <div class="dropdown">
+                        <h3 class="border dropdown-toggle text-center" id="menu1" data-toggle="dropdown">Add Exp.</h3>
+                        <div class="dropdown-menu width text-center" aria-labelledby="menu1">
+                          <p class="text-center">Date(DD-MM-YYYY):<input type="text" class="date"></p>
+                          <p class="text-center">Title:<input type="text" class="title"></p>
+                          <p class="text-center">Price:<input type="number" class="price"></p>
+                          <p class="divider"></p>
+                          <p class="submit text-center">Submit</p>
+                        </div>
+                      </div>
+         
+        </div>
+         
+        
+    </div>
+</div>
+</body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  //Declate Variables
+  var Date1 = [];
+  var Price = [];
+  var Title = [];
+  var Status = [];
+  var expensesNumber = null;
+  var expWriteNumber = null;
+  var sDate = null;
+  var sTitle = null;
+  var sPrice = null;
+  var counter = 0;
+  var totalExpenses = 0;
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAPESOvSYKNECgdO7u_1mOafzoIjmBfRA0",
+    authDomain: "quiz-1b3ff.firebaseapp.com",
+    databaseURL: "https://quiz-1b3ff.firebaseio.com",
+    projectId: "quiz-1b3ff",
+    storageBucket: "quiz-1b3ff.appspot.com",
+    messagingSenderId: "99762053153",
+    appId: "1:99762053153:web:9974e9f78e2eb3f4"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  var database = firebase.database();
+ readNumberOfExpenses();
+ 
+//Submit Expense
+$(".submit").click(function(){
+  SubmitExpense();
+  });
+
+  // ...
+//Functions
+function SubmitExpense(){
+    console.log("You pressed Submited");
+    sDate = $(".date").val();
+    sTitle = $(".title").val();
+    sPrice = $(".price").val();
+    console.log("sDate:"+sDate,"\nsTitle:"+sTitle,"\nsPrice:"+sPrice+"\nexpWriteNumber:"+expWriteNumber);
+    writeNewExpense();
+    }
+async function readNumberOfExpenses(){
+  //Read Number of Total Expenses
+  firebase.database().ref('/Expenses/June/Expenses').once('value').then(function(snapshot) {
+      expensesNumber = (snapshot.val() && snapshot.val().number);
+      expWriteNumber = Number(expensesNumber) + 1;
+      console.log("ExpensesNumber:"+expensesNumber)
+      readExpenses();
+    });
+}
+async function readExpenses(){
+  //Read Data
+  for(var i=0;i<expensesNumber;i++){
+    console.log("Counter:"+i);
+  firebase.database().ref('/Expenses/June/'+(i+1)).once('value').then(function(snapshot) {
+   Date1[i] = (snapshot.val() && snapshot.val().Date) || 'Anonymous';
+   Price[i] = (snapshot.val() && snapshot.val().Price) || 'Anonymous';
+   Title[i] = (snapshot.val() && snapshot.val().Title) || 'Anonymous';
+   Status[i] = (snapshot.val() && snapshot.val().Status) || 'Anonymous';
+  console.log("Month:"+Date1[i]+"\nPrice:"+Price[i]+"\nTitle:"+Title[i]+"\nStatus:"+Status[i]);
+  counter++;
+  $(".expenses").append( "<p>" + counter +". Date:"+Date1[i] + " Title:"+Title[i]+" Price:"+Price[i]+ "</p>");
+   totalExpenses = totalExpenses + Number(Price[i]);
+  console.log(totalExpenses);
+  $(".totalJune").html(totalExpenses);
+})
+};
+}
+function writeNewExpense() {
+  console.log("sDate:"+sDate,"\nsTitle:"+sTitle,"\nsPrice:"+sPrice+"\nexpWriteNumber:"+expWriteNumber);
+  firebase.database().ref('/Expenses/June/' + expWriteNumber).set({
+    Date: sDate,
+    Title: sTitle,
+    Price: sPrice,
+    Status: "Active"
+  });
+  firebase.database().ref('/Expenses/June/Expenses').set({
+    number: expWriteNumber
+  });
+}
+</script>
+<script src="js.js"></script>
+</html>
