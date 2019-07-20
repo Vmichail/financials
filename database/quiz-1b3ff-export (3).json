@@ -1,0 +1,159 @@
+{
+  "Expenses" : {
+    "June" : {
+      "1" : {
+        "Date" : "3-6-2019",
+        "Price" : "1.70",
+        "Status" : "Active",
+        "Title" : "Freddo Espresso Grante"
+      },
+      "2" : {
+        "Date" : "03-06-2019",
+        "Price" : "0.60",
+        "Status" : "Active",
+        "Title" : "Κουλούρι"
+      },
+      "3" : {
+        "Date" : "01-06-2019",
+        "Price" : "10.00",
+        "Status" : "Active",
+        "Title" : "Καρτα Cosmote"
+      },
+      "4" : {
+        "Date" : "03-06-2019",
+        "Price" : "12.63",
+        "Status" : "Active",
+        "Title" : "Supermarket"
+      },
+      "5" : {
+        "Date" : "04-06-2019",
+        "Price" : "1.70",
+        "Status" : "Active",
+        "Title" : "Freddo Espresso Grante"
+      },
+      "6" : {
+        "Date" : "04-06-2019",
+        "Price" : "10.00",
+        "Status" : "Active",
+        "Title" : "Κούρεμα"
+      },
+      "7" : {
+        "Date" : "04-06-2019",
+        "Price" : "1.20",
+        "Status" : "Active",
+        "Title" : "Λουκανικόπιτα"
+      },
+      "8" : {
+        "Date" : "05-06-2019",
+        "Price" : "1.10",
+        "Status" : "Active",
+        "Title" : "Τυρόπιτα Τρίγωνη"
+      },
+      "9" : {
+        "Date" : "05-06-2019",
+        "Price" : "1.70",
+        "Status" : "Active",
+        "Title" : "Freddo Espresso Grante"
+      },
+      "10" : {
+        "Date" : "06-06-2019",
+        "Price" : "12.50",
+        "Status" : "Active",
+        "Title" : "Κάρτα Cosmote"
+      },
+      "11" : {
+        "Date" : "06-06-2019",
+        "Price" : "0.60",
+        "Status" : "Active",
+        "Title" : "Κουλουρι(Ολικής)"
+      },
+      "12" : {
+        "Date" : "06-06-2019",
+        "Price" : "1.70",
+        "Status" : "Active",
+        "Title" : "Freddo Espresso Grante"
+      },
+      "13" : {
+        "Date" : "6-6-2019",
+        "Price" : "11.74",
+        "Status" : "Active",
+        "Title" : "Supermarket"
+      },
+      "14" : {
+        "Date" : "06-07-2019",
+        "Price" : "2.00",
+        "Status" : "Active",
+        "Title" : "Σαντουιτς Γαλοπούλα"
+      },
+      "15" : {
+        "Date" : "06-07-2019",
+        "Price" : "1.70",
+        "Status" : "Active",
+        "Title" : "Freddo Espresso Grante"
+      },
+      "16" : {
+        "Date" : "07-06-2019",
+        "Price" : "4.70",
+        "Status" : "Active",
+        "Title" : "Κοτόπουλο Ρύζι"
+      },
+      "17" : {
+        "Date" : "08-06-2019",
+        "Price" : "77.60",
+        "Status" : "Active",
+        "Title" : "Ψωνια(Ρουχα)"
+      },
+      "18" : {
+        "Date" : "09-06-2019",
+        "Price" : "20.00",
+        "Status" : "Active",
+        "Title" : "Supermarket"
+      },
+      "19" : {
+        "Date" : "09-06-2019",
+        "Price" : "5.50",
+        "Status" : "Active",
+        "Title" : "Delivery"
+      },
+      "20" : {
+        "Date" : "06-10-2019",
+        "Price" : "1.10",
+        "Status" : "Active",
+        "Title" : "Τυρόπιτα Τρίγωνη"
+      },
+      "21" : {
+        "Date" : "10-06-2019",
+        "Price" : "1.70",
+        "Status" : "Active",
+        "Title" : "Freddo Espresso Grante"
+      },
+      "22" : {
+        "Date" : "10-06-2019",
+        "Price" : "10.15",
+        "Status" : "Active",
+        "Title" : "Supermarket"
+      },
+      "23" : {
+        "Date" : "",
+        "Day" : "11",
+        "Price" : "1.70",
+        "Status" : "Active",
+        "Title" : "Freddo Espresso Grante"
+      },
+      "Expenses" : {
+        "number" : 23
+      }
+    }
+  },
+  "users" : {
+    "VMichail2" : {
+      "months" :{
+        "july":{
+          "impExpenses":{
+            
+          }
+
+        }
+      }
+  }
+}

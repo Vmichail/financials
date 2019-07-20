@@ -1,0 +1,11 @@
+.allExpenses{
+    display: none;
+}
+
+.border2 {
+    background-color: rgb(120, 227, 253);
+    font-size: 18px;
+}
+.border2:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,8 @@
+.month {
+    border: 3px solid brown;
+    background-color: rgb(255, 226, 162);
+    margin-bottom: 4px;
+}
+.month:hover {
+    background-color: rgb(255, 203, 89);
+}

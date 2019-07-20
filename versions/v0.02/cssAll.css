@@ -1,0 +1,56 @@
+
+.lightblue {
+    color:  rgb(92, 170, 235) !important;
+}
+.border {
+    padding: 5%;
+    cursor: pointer;
+    border: 1px solid black;
+}
+.width {
+    margin-top: 0;
+    width: 100%;
+}
+.edit:hover {
+    cursor: pointer;
+    background-color: rgb(92, 170, 235) !important;
+}
+.submit{
+    padding: 15px;
+    background-color: rgb(92, 235, 187) !important;
+}
+.submit:hover {
+    cursor: pointer;
+    background-color: rgb(92, 170, 235) !important;
+}
+.totalExpenses {
+    text-decoration: underline;
+    color: brown;
+}
+/*Incomes */
+.incomes {
+    background-color: rgb(164, 255, 164);
+}
+.expenses {
+    background-color: rgb(255, 170, 170)
+}
+.summary {
+    background-color: rgb(158, 249, 255);
+}
+
+.incomes:hover {
+    background-color: rgb(72, 255, 72);
+}
+.expenses:hover {
+    background-color: rgb(255, 88, 88)
+}
+.summary:hover {
+    background-color: rgb(68, 243, 255);
+}
+
+.expenses2,.incomes2,.summary2 {
+    text-align: center !important;
+}
+.edit {
+    padding: 15px;
+}

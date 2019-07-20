@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Financials</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="cssAll.css">
+  <link rel="stylesheet" type="text/css" href="cssHome.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- navbar-->
+<section>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#" name="home">Financials</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active goHome"><a href="#" name="home">Home</a></li>
+            <li><a href="#" class="goIncomes">Incomes</a></li>
+            <li><a href="#" class="goExpenses">Expenses</a></li>
+            <li><a href="#">Summary</a></li>
+          </ul>
+        </div>
+      </nav>
+</section>
+<div class="jumbotron text-center">
+  <h3>Welcome <span class="name lightblue"></span> </h4>
+  <p>Below you can see your overview of your expenses/incomes</p> 
+  <p class="lightblue">v0.01</p>
+</div>
+ <!-- JUNE!      --> 
+<div class="container month">
+  <div class="row">
+    <div class="col-sm-12  pointer" id="june">
+      <h3 class="text-center">June 2019</h3>
+     
+    </div>
+  <div class="row" id="jInfo">
+        <div class="col-sm-4">
+                <div class="dropdown">
+                        <h3 class="border incomes dropdown-toggle text-center" id="menu1" data-toggle="dropdown">Income:<span class="juneTotalIncome"></span></h3>
+                        <div class="dropdown-menu width incomes2" aria-labelledby="menu1">
+                          <p class="divider"></p>
+                          <p class="edit">Add/Edit Income</p>
+                        </div>
+                      </div>
+         
+        </div>
+        <div class="col-sm-4">
+                <div class="dropdown">
+                        <h3 class="border expenses dropdown-toggle text-center" id="menu1" data-toggle="dropdown">Expenses:<span class="totalExpensesValue"></span></h3>
+                        <div class="dropdown-menu width expenses2 " aria-labelledby="menu1">
+                          <p class="divider"></p>
+                          <p class="otherExpenses">Other Expenses:<span id="otherExpensesValue"></span></p>
+                          <p class="divider"></p>
+                          <p class="edit goExpenses">Add/Edit Expenses</p>
+                        </div>
+                      </div>
+         
+        </div>
+         
+        <div class="col-sm-4">
+                <div class="dropdown">
+                        <h3 class="border summary dropdown-toggle text-center" id="menu1" data-toggle="dropdown">Summary:<span class="juneSummaryValue"></span></h3>
+                        <div class="dropdown-menu width summary2" aria-labelledby="menu1">
+                          <p>Total Incomes:<span class="juneTotalIncome"></span></p>
+                          <p>Total Expenses:<span class="totalExpensesValue"></span></p>
+                          <p class="divider"></p>
+                          <p>Summary:<span class="juneSummaryValue"></span></p>
+                          <p class="divider"></p>
+                          <p class="edit">Add/Edit Summary(Should not be used)</p>
+                        </div>
+                      </div>
+         
+        </div>
+    </div>
+</div>
+</div>
+<!-- JULY!--> 
+<div class="container month pointer" id="july">
+  <div class="row">
+    <div class="col-sm-12">
+      <h3 class="text-center pointer">July 2019</h3>
+     
+    </div>
+  <div class="row" id="jInfo">
+        <div class="col-sm-4">
+                <div class="dropdown">
+                        <h3 class="border incomes dropdown-toggle text-center" id="menu1" data-toggle="dropdown">Income:<span class="julyTotalIncome"></span></h3>
+                        <div class="dropdown-menu width incomes2" aria-labelledby="menu1">
+                          <p class="divider"></p>
+                          <p class="edit">Add/Edit Income</p>
+                        </div>
+                      </div>
+         
+        </div>
+        <div class="col-sm-4">
+                <div class="dropdown">
+                        <h3 class="border expenses dropdown-toggle text-center" id="menu1" data-toggle="dropdown">Expenses:<span class="totalExpensesValue"></span></h3>
+                        <div class="dropdown-menu width expenses2 " aria-labelledby="menu1">
+                          <p class="divider"></p>
+                          <p class="otherExpenses">Other Expenses:<span id="otherExpensesValue"></span></p>
+                          <p class="divider"></p>
+                          <p class="edit goExpenses">Add/Edit Expenses</p>
+                        </div>
+                      </div>
+         
+        </div>
+         
+        <div class="col-sm-4">
+                <div class="dropdown">
+                        <h3 class="border summary dropdown-toggle text-center" id="menu1" data-toggle="dropdown">Summary:<span class="julySummaryValue"></span></h3>
+                        <div class="dropdown-menu width summary2" aria-labelledby="menu1">
+                          <p>Total Incomes:<span class="juneTotalIncome"></span></p>
+                          <p>Total Expenses:<span class="totalExpensesValue"></span></p>
+                          <p class="divider"></p>
+                          <p>Summary:<span class="julySummaryValue"></span></p>
+                          <p class="divider"></p>
+                          <p class="edit">Add/Edit Summary(Should not be used)</p>
+                        </div>
+                      </div>
+         
+        </div>
+    </div>
+</div>
+</div>
+<!-- August-->
+<div class="container month pointer" id="august">
+  <div class="row">
+    <div class="col-sm-12">
+      <h3 class="text-center">August 2019</h3>
+     
+    </div>
+  <div class="row" id="jInfo">
+        <div class="col-sm-4">
+                <div class="dropdown">
+                        <h3 class="border incomes dropdown-toggle text-center" id="menu1" data-toggle="dropdown">Income:<span class="juneTotalIncome"></span></h3>
+                        <div class="dropdown-menu width incomes2" aria-labelledby="menu1">
+                          <p class="divider"></p>
+                          <p class="edit">Add/Edit Income</p>
+                        </div>
+                      </div>
+         
+        </div>
+        <div class="col-sm-4">
+                <div class="dropdown">
+                        <h3 class="border expenses dropdown-toggle text-center" id="menu1" data-toggle="dropdown">Expenses:<span class="totalExpensesValue"></span></h3>
+                        <div class="dropdown-menu width expenses2 " aria-labelledby="menu1">
+                          <p class="divider"></p>
+                          <p class="otherExpenses">Other Expenses:<span id="otherExpensesValue"></span></p>
+                          <p class="divider"></p>
+                          <p class="edit goExpenses">Add/Edit Expenses</p>
+                        </div>
+                      </div>
+         
+        </div>
+         
+        <div class="col-sm-4">
+                <div class="dropdown">
+                        <h3 class="border summary dropdown-toggle text-center" id="menu1" data-toggle="dropdown">Summary:<span class="juneSummaryValue"></span></h3>
+                        <div class="dropdown-menu width summary2" aria-labelledby="menu1">
+                          <p>Total Incomes:<span class="juneTotalIncome"></span></p>
+                          <p>Total Expenses:<span class="totalExpensesValue"></span></p>
+                          <p class="divider"></p>
+                          <p>Summary:<span class="juneSummaryValue"></span></p>
+                          <p class="divider"></p>
+                          <p class="edit">Add/Edit Summary(Should not be used)</p>
+                        </div>
+                      </div>
+         
+        </div>
+    </div>
+</div>
+</div>
+</body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  //Variables Declaration
+  var SummaryExpenses=0;
+  var SummaryIncome=0;
+  var juneTotalIncome=0;
+  var incomesNumber=0;
+  var expensesNumber=0;
+  var totalImpExpenses=0;
+  var totalExpenses=0;
+  var totalIncome = 0;
+  var otherExpenses=0;
+  var counter= 0;
+  var counter2= 0;
+  var eDate=[];
+  var ePrice=[];
+  var eTitle=[];
+  var eStatus=[];
+  var iDate=[];
+  var iPrice=[];
+  var iTitle=[];
+  var iStatus=[];
+  var juneSummaryValue=0;
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAPESOvSYKNECgdO7u_1mOafzoIjmBfRA0",
+    authDomain: "quiz-1b3ff.firebaseapp.com",
+    databaseURL: "https://quiz-1b3ff.firebaseio.com",
+    projectId: "quiz-1b3ff",
+    storageBucket: "quiz-1b3ff.appspot.com",
+    messagingSenderId: "99762053153",
+    appId: "1:99762053153:web:9974e9f78e2eb3f4"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  var database = firebase.database();
+  //Read Data
+  readNumberOfIncExp();
+  readJuneTotalIncome();
+  updateJuneSummary();
+  readJuneSummary();
+
+
+
+
+async function readNumberOfIncExp(){
+   //Read Income,Expenses Number
+   firebase.database().ref('users/VMichail/juneIncomes/incomes').once('value').then(function(snapshot) {
+    incomesNumber = (snapshot.val() && snapshot.val().number);
+    readIncomes(updateIncome);
+    }),
+    firebase.database().ref('users/VMichail/ImpExpenses/Expenses1').once('value').then(function(snapshot) {
+    expensesNumber = (snapshot.val() && snapshot.val().number);
+    readExpenses();
+    })
+}
+
+async function readExpenses(){
+  //Read Data
+  for(var i=0;i<expensesNumber;i++){
+  //console.log("Counter:"+i);
+  firebase.database().ref('users/VMichail/ImpExpenses/'+(i+1)).once('value').then(function(snapshot) {
+   eDate[i] = (snapshot.val() && snapshot.val().date) || 'Anonymous';
+   ePrice[i] = (snapshot.val() && snapshot.val().value) || 'Anonymous';
+   eTitle[i] = (snapshot.val() && snapshot.val().title) || 'Anonymous';
+   eStatus[i] = (snapshot.val() && snapshot.val().status) || 'Anonymous';
+  //console.log("Month:"+eDate[i]+"\nPrice:"+ePrice[i]+"\nTitle:"+eTitle[i]+"\nStatus:"+eStatus[i]);
+  counter++;
+  
+  $(".expenses2").prepend( "<p>"+eTitle[i]+":"+ePrice[i]+ "</p>");
+   totalImpExpenses = totalImpExpenses + Number(ePrice[i]);
+  //console.log(totalExpenses);
+  $(".totalJune").html(totalExpenses);
+  
+})
+};
+firebase.database().ref('users/VMichail').once('value').then(function(snapshot) {
+ otherExpenses = (snapshot.val() && snapshot.val().Expenses || 'Undentified');
+ totalExpenses = Number(Number(totalImpExpenses) + Number(otherExpenses)).toFixed(2);
+ $("#otherExpensesValue").html(otherExpenses);
+ updateTotalExpenses();
+ $(".totalExpensesValue").html(totalExpenses);
+});
+
+}
+function updateTotalExpenses(){
+  console.log("expenses:"+Number(totalExpenses));
+  firebase.database().ref('/users/VMichail').update(
+    {'expenses': Number(totalExpenses)}
+  );
+}
+function readIncomes(callback){
+  //Read Data
+  counter2=0;
+  console.log("IncomesNumber:"+incomesNumber);
+  for(var i=0;i<incomesNumber;i++){
+  console.log("Counter:"+i);
+  firebase.database().ref('users/VMichail/juneIncomes/'+(i+1)).once('value').then(function(snapshot) {
+   iDate[i] = (snapshot.val() && snapshot.val().date) || 'Anonymous';
+   iPrice[i] = (snapshot.val() && snapshot.val().value) || 'Anonymous';
+   iTitle[i] = (snapshot.val() && snapshot.val().title) || 'Anonymous';
+   iStatus[i] = (snapshot.val() && snapshot.val().status) || 'Anonymous';
+  console.log("Month:"+iDate[i]+"\nPrice:"+iPrice[i]+"\nTitle:"+iTitle[i]+"\nStatus:"+iStatus[i]);
+  counter2++;
+  $(".incomes2").prepend( "<p>"+iTitle[i]+":"+iPrice[i]+ "</p>");
+   totalIncome = totalIncome + Number(iPrice[i]);
+   if((counter2)==incomesNumber){
+     callback();
+    }
+})
+
+}
+}
+async function updateIncome(){
+  console.log("TotalIncome:"+totalIncome);
+  firebase.database().ref('/users/VMichail/incomeMonth/6').update(
+    {'income': Number(totalIncome)}
+  );
+}
+function readJuneTotalIncome(){
+  firebase.database().ref('users/VMichail/incomeMonth/6').once('value').then(function(snapshot) {
+   juneTotalIncome = (snapshot.val() && snapshot.val().income) || 'Anonymous';
+   $(".juneTotalIncome").html(juneTotalIncome);
+});
+
+}
+function readJuneSummary(){
+  firebase.database().ref('users/VMichail/summary/june').once('value').then(function(snapshot) {
+    juneSummaryValue = (snapshot.val() && snapshot.val().summary) || 'Anonymous';
+   $(".juneSummaryValue").html(juneSummaryValue);
+});
+
+}
+
+async function updateJuneSummary(){
+  //readExpensesValue
+  firebase.database().ref('users/VMichail/').once('value').then(function(snapshot) {
+    SummaryExpenses = (snapshot.val() && snapshot.val().expenses) || 'Anonymous';
+   readSummaryIncome();
+});
+}
+function readSummaryIncome(){
+  firebase.database().ref('users/VMichail/incomeMonth/6').once('value').then(function(snapshot) {
+    SummaryIncome = (snapshot.val() && snapshot.val().income) || 'Anonymous';
+    console.log("Summary:"+Number(SummaryIncome - SummaryExpenses));
+   writeSummaryValue();
+});
+}
+function writeSummaryValue(){
+  
+  firebase.database().ref('/users/VMichail/summary/june').update(
+    {'summary': Number(SummaryIncome - SummaryExpenses).toFixed(2)}
+  );
+}
+</script>
+<script src="js.js"></script>
+</html>
